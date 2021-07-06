@@ -77,7 +77,7 @@ int main () {
 
     // sort
     std::sort(data, data+dind, [](school &a, school &b) {
-        if (a.tws != b.tws) {
+        if (floor(a.tws) != floor(b.tws)) { // WTF
             return a.tws > b.tws;
         } else if (a.ns != b.ns) {
             return a.ns < b.ns;
@@ -90,7 +90,7 @@ int main () {
     int rank = 1;
     for(int i=0;i<dind;) {
         int current_rank = rank;
-        printf("%d %s %.0f %d\n", current_rank, data[i].name, floor(data[i].tws), data[i].ns);
+        printf("%d %s %.0lf %d\n", current_rank, data[i].name, floor(data[i].tws), data[i].ns);
         rank++;
         int tws = floor(data[i].tws);
         i++;
@@ -99,7 +99,7 @@ int main () {
                 break;
             }
             DEBUG(printf("T");)
-            printf("%d %s %.0f %d\n", current_rank, data[j].name, floor(data[j].tws), data[j].ns);
+            printf("%d %s %.0lf %d\n", current_rank, data[j].name, floor(data[j].tws), data[j].ns);
             rank++;
             i++;
         }
