@@ -1,5 +1,4 @@
-#include <cstdio>
-#include <iostream>
+#include <stdio.h>
 
 #ifndef ONLINE_JUDGE
 #define DEBUG(X) X
@@ -7,15 +6,13 @@
 #define DEBUG(X) 
 #endif
 
-using namespace std;
-
 int main () {
     #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
     setbuf(stdout, NULL);
     #endif
     int count;
-    std::cin >> count;
+    scanf("%d", &count);
 
     return 0;
 }

@@ -1,0 +1,17 @@
+6 110 1 10
+2
+
+1 ab 1 2
+Impossible
+
+acd 10 1 16
+2765
+
+10 10 1 2
+2
+
+323 acd 1 10
+Impossible
+
+aa aa 1 11
+11
