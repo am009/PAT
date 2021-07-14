@@ -1,5 +1,6 @@
 #include <cstdio>
 #include <iostream>
+#include <unordered_map>
 
 // define ONLINE_JUDGE
 
@@ -16,8 +17,17 @@ int main () {
     freopen("input.txt", "r", stdin);
     setbuf(stdout, NULL);
     #endif
-    int count;
-    cin >> count;
+    int N;
+    cin >> N;
+    unordered_map<int,int> imap;
+    int count = 0;
+    for(int i=0;i<N;i++) {
+        int in; cin>>in;
+        if (in < 0) {in = - in;}
+        int old = imap[in]++;
+        if (old) {count++;}
+    }
+    printf("%d\n", count);
 
     return 0;
 }
